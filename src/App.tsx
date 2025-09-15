@@ -9,6 +9,7 @@ import { parseDatesCSV } from './utils/parseDatesCSV';
 import type { TeamDates } from './utils/parseDatesCSV';
 import { getRotatingTeams } from './utils/rotationLogic';
 import RotationResults from './components/RotationResults';
+import datesCSV from './assets/dates.csv?raw';
 
 
 function App() {
@@ -19,13 +20,9 @@ function App() {
   const [allTeamData, setAllTeamData] = useState<TeamDates[]>([]);
 
   useEffect(() => {
-    fetch('/dates.csv')
-      .then(res => res.text())
-      .then(text => {
-        const parsed: TeamDates[] = parseDatesCSV(text);
-        setTeams(parsed.map(t => t.team));
-        setAllTeamData(parsed);
-      });
+    const parsed: TeamDates[] = parseDatesCSV(datesCSV);
+    setTeams(parsed.map(t => t.team));
+    setAllTeamData(parsed);
   }, []);
 
   const handleGWChange = (start: number, end: number) => {
