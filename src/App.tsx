@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <h1>UCL Fantasy Team Rotation</h1>
+      <h1>UCL Fantasy Rotations</h1>
       <div className="card">
         <TeamDropdown
           teams={teams}
