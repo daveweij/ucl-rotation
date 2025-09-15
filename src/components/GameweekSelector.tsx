@@ -27,7 +27,7 @@ const GameweekSelector: React.FC<GameweekSelectorProps> = ({ startGW, endGW, onC
   return (
     <div className="gw-selector">
       <label>
-        Check rotations from gameweek
+        Check rotations from GW
         <select value={startGW} onChange={handleStartChange} className="gw-select">
           {Array.from({ length: GW_MAX }, (_, i) => i + GW_MIN).map(gw => (
             <option key={gw} value={gw}>{gw}</option>
@@ -35,7 +35,7 @@ const GameweekSelector: React.FC<GameweekSelectorProps> = ({ startGW, endGW, onC
         </select>
       </label>
       <label>
-        until gameweek
+        until GW
         <select value={endGW} onChange={handleEndChange} className="gw-select">
           {Array.from({ length: GW_MAX }, (_, i) => i + GW_MIN).map(gw => (
             <option key={gw} value={gw}>{gw}</option>
