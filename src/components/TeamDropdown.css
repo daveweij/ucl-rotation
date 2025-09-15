@@ -3,6 +3,8 @@
   flex-direction: column;
   gap: 0.5rem;
   max-width: 300px;
+  background: #fff;
+  color: #222;
 }
 
 .team-dropdown-input {
@@ -10,6 +12,8 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background: #fff;
+  color: #222;
 }
 
 .team-dropdown-select {
@@ -18,4 +22,5 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   background: #fff;
+  color: #222;
 }

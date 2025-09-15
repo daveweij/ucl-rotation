@@ -11,38 +11,42 @@ const GW_MIN = 1;
 const GW_MAX = 8;
 
 const GameweekSelector: React.FC<GameweekSelectorProps> = ({ startGW, endGW, onChange }) => {
+
   const handleStartChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newStart = Number(e.target.value);
-    if (newStart < endGW) {
-      onChange(newStart, endGW);
-    }
+    onChange(newStart, endGW);
   };
 
   const handleEndChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newEnd = Number(e.target.value);
-    if (newEnd > startGW) {
-      onChange(startGW, newEnd);
-    }
+    onChange(startGW, newEnd);
   };
+
+  const showWarning = endGW < startGW;
 
   return (
     <div className="gw-selector">
       <label>
-        Start GW:
+        Check rotations from gameweek
         <select value={startGW} onChange={handleStartChange} className="gw-select">
           {Array.from({ length: GW_MAX }, (_, i) => i + GW_MIN).map(gw => (
-            <option key={gw} value={gw} disabled={gw >= endGW}>{gw}</option>
+            <option key={gw} value={gw}>{gw}</option>
           ))}
         </select>
       </label>
       <label>
-        End GW:
+        until gameweek
         <select value={endGW} onChange={handleEndChange} className="gw-select">
           {Array.from({ length: GW_MAX }, (_, i) => i + GW_MIN).map(gw => (
-            <option key={gw} value={gw} disabled={gw <= startGW}>{gw}</option>
+            <option key={gw} value={gw}>{gw}</option>
           ))}
         </select>
       </label>
+      {showWarning && (
+        <div className="gw-warning">
+          Please select a final gameweek later than the starting gameweek
+        </div>
+      )}
     </div>
   );
 };

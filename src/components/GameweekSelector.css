@@ -3,6 +3,8 @@
   gap: 1rem;
   align-items: center;
   margin-top: 1rem;
+  background: #fff;
+  color: #222;
 }
 
 .gw-select {
@@ -12,4 +14,15 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   background: #fff;
+  color: #222;
+}
+
+.gw-warning {
+  color: #b71c1c;
+  background: #ffebee;
+  border: 1px solid #f44336;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
 }
