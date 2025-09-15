@@ -19,7 +19,7 @@ function App() {
   const [allTeamData, setAllTeamData] = useState<TeamDates[]>([]);
 
   useEffect(() => {
-    fetch('src/assets/dates.csv')
+    fetch('/dates.csv')
       .then(res => res.text())
       .then(text => {
         const parsed: TeamDates[] = parseDatesCSV(text);
