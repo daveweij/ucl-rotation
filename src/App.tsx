@@ -14,7 +14,7 @@ import datesCSV from './assets/dates.csv?raw';
 
 function App() {
   const [startGW, setStartGW] = useState(1);
-  const [endGW, setEndGW] = useState(2);
+  const [endGW, setEndGW] = useState(7);
   const [teams, setTeams] = useState<string[]>([]);
   const [selectedTeam, setSelectedTeam] = useState('');
   const [allTeamData, setAllTeamData] = useState<TeamDates[]>([]);
