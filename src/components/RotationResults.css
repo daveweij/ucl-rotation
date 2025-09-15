@@ -1,0 +1,22 @@
+.rotation-results {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  max-width: 400px;
+}
+
+.rotation-results h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.rotation-results ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.rotation-results li {
+  margin-bottom: 0.3rem;
+}
